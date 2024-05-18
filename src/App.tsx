@@ -1,5 +1,21 @@
-function App() {
-    return <h1 className="text-3xl underline text-blue-400">Hello</h1>;
-}
+import React from "react";
+import { createBrowserRouter } from "react-router-dom";
 
-export default App;
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Home from "./pages/Home";
+
+export const App = createBrowserRouter([
+    {
+        path: "/",
+        element: <Login />,
+    },
+    {
+        path: "/register",
+        element: <Register />,
+    },
+    {
+        path: "/home",
+        element: <Home />,
+    },
+]);
