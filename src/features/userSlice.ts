@@ -9,6 +9,7 @@ const initialState = {
         status: "",
         token: "",
     },
+    error: "",
 };
 
 export const userSlice = createSlice({
@@ -16,7 +17,6 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         logout: (state) => {
-            state.status = "";
             state.error = "";
             state.user = {
                 id: "",
